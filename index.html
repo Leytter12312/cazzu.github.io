@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#E52E2E">
+    <meta name="description" content="Banderillas coreanas con delivery en Constanza, RD. Pide por WhatsApp.">
+    <link rel="icon" href="assets/logo.png">
+    <title>Cozzu Fast Food | Banderillas Coreanas en Constanza</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E52E2E',
+                            darkRed: '#B81D1D',
+                            orange: '#FF6B00',
+                            yellow: '#FFB800',
+                            cream: '#FFF9F2',
+                            dark: '#1C1917',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-brand-dark antialiased selection:bg-brand-orange selection:text-white pb-24 md:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-red text-white py-2 px-4 text-xs md:text-sm text-center font-medium flex items-center justify-center gap-2 shadow-sm">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>📍 Delivery en Constanza | Mar–Sáb 5–9 PM · Dom 4–9 PM</span>
+        <span class="hidden md:inline">| ✨ ¡Sabor que se queda contigo!</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100 shadow-sm">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Brand Logo / Name -->
+            <a href="#" class="flex items-center group" aria-label="Cozzu Fast Food - inicio"><img src="assets/logo.png" alt="Cozzu Fast Food" class="h-12 w-auto group-hover:scale-105 transition-transform"></a>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-700">
+                <a href="#menu" class="hover:text-brand-red transition-colors">Menú de Banderillas</a>
+                <a href="#acerca" class="hover:text-brand-red transition-colors">Sobre Cozzu</a>
+                <a href="#contacto" class="hover:text-brand-red transition-colors">Info & Horario</a>
+            </nav>
+
+            <!-- Cart Trigger Button -->
+            <button type="button" data-open-cart aria-label="Abrir tu pedido" class="relative bg-brand-yellow/20 hover:bg-brand-yellow/30 text-brand-dark font-semibold px-4 py-2 rounded-full flex items-center gap-2 border border-brand-yellow/50 transition-all">
+                <i class="fa-solid fa-basket-shopping text-brand-orange text-lg"></i>
+                <span class="hidden sm:inline text-sm">Tu Pedido</span>
+                <span id="cartCountBadge" class="bg-brand-red text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-8 pb-16 md:py-20 border-b border-amber-100/60">
+        <div class="absolute inset-0 checker-bg pointer-events-none"></div>
+        
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Hero Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-yellow/20 border border-brand-yellow/50 px-3 py-1.5 rounded-full text-xs font-bold text-brand-dark uppercase tracking-wider">
+                        <i class="fa-solid fa-fire text-brand-orange"></i>
+                        <span>Las mejores Banderillas Coreanas</span>
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-dark leading-tight">
+                        ¡Sabor crujiente <br class="hidden sm:inline">que <span class="text-brand-red underline decoration-brand-yellow decoration-4 underline-offset-4">se queda contigo!</span> 😋
+                    </h1>
+
+                    <p class="text-stone-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                        Disfruta de las auténticas <strong>Banderillas Coreanas</strong> en Constanza. Cubiertas crujientes de papa, ramen y Cheetos, con relleno de salchicha o queso mozzarella, directo a tu puerta.
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-xs font-semibold text-stone-700 pt-2">
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-stone-100">
+                            <i class="fa-solid fa-motorcycle text-brand-orange text-base"></i>
+                            <span>Solo Delivery</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-stone-100">
+                            <i class="fa-solid fa-location-dot text-brand-red text-base"></i>
+                            <span>Constanza, RD</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-stone-100">
+                            <i class="fa-solid fa-calendar-days text-brand-yellow text-base"></i>
+                            <span>Mar - Dom</span>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#menu" class="w-full sm:w-auto bg-brand-red hover:bg-brand-darkRed text-white font-bold text-base px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 animate-subtle">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Ver Menú & Ordenar</span>
+                        </a>
+
+                        <a href="https://wa.me/18299371403?text=Hola%20Anayelis!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20en%20Cozzu%20Fast%20Food" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base px-6 py-4 rounded-2xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>WhatsApp Directo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Red Accent Frame Background -->
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-brand-red to-brand-yellow rounded-3xl transform rotate-2 blur-sm opacity-80"></div>
+                        
+                        <!-- Main Showcase Card -->
+                        <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-stone-100 text-center overflow-hidden">
+                            <div class="relative rounded-2xl overflow-hidden mb-4 aspect-[4/5] bg-stone-900">
+                                <img src="assets/flamin.jpg" alt="Banderilla de Cheetos Flamin Hot de Cozzu" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" fetchpriority="high">
+                                <div class="absolute top-3 left-3 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                    🔥 Spicy
+                                </div>
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-left text-white">
+                                    <p class="font-heading text-lg font-bold">Cubierta de Cheetos Flamin Hot</p>
+                                    <p class="text-xs text-amber-200">Spicy Cheetos con salchicha, queso o mixto</p>
+                                </div>
+                            </div>
+
+                            <!-- CEO Credit Tag -->
+                            <div class="flex items-center justify-between px-2 pt-1 text-xs text-stone-500">
+                                <span class="flex items-center gap-1 font-medium">
+                                    <i class="fa-solid fa-crown text-brand-yellow"></i>
+                                    CEO: <strong class="text-stone-800">Anayelis Méndez</strong>
+                                </span>
+                                <a href="https://www.instagram.com/cozzufastfood/" target="_blank" rel="noopener noreferrer" class="text-brand-red font-bold hover:underline flex items-center gap-1">
+                                    <i class="fa-brands fa-instagram"></i> @cozzufastfood
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-brand-orange/10 px-3 py-1 rounded-full">Delicias Coreanas</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Nuestras Banderillas Estrellas</h2>
+                <p class="text-stone-500 text-sm sm:text-base mt-2">Elige tu combinación favorita. Escoge tu cubierta y el relleno: salchicha, queso mozzarella o mixto.</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="filterContainer" role="group" aria-label="Filtrar menú por categoría">
+                <button type="button" data-filter="all" aria-pressed="true" class="filter-btn bg-brand-red text-white shadow-sm px-5 py-2.5 rounded-full text-sm font-semibold transition-all">Todos</button>
+                <button type="button" data-filter="clasica" aria-pressed="false" class="filter-btn bg-stone-100 text-stone-700 hover:bg-stone-200 px-5 py-2.5 rounded-full text-sm font-semibold transition-all">Clásicas</button>
+                <button type="button" data-filter="crunch" aria-pressed="false" class="filter-btn bg-stone-100 text-stone-700 hover:bg-stone-200 px-5 py-2.5 rounded-full text-sm font-semibold transition-all">Cubiertas Crunch</button>
+                <button type="button" data-filter="pollo" aria-pressed="false" class="filter-btn bg-stone-100 text-stone-700 hover:bg-stone-200 px-5 py-2.5 rounded-full text-sm font-semibold transition-all">Cozzu Chicken</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menuGrid" aria-live="polite">
+                <!-- Items populated via JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SAUCES & TOPPINGS INFO -->
+    <section class="py-12 bg-amber-50/60 border-y border-amber-100">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-amber-200/70 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <span class="bg-brand-yellow/30 text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase">Aderezos</span>
+                    <h3 class="font-heading text-2xl font-bold text-brand-dark">Acompaña tu Banderilla con tu Aderezo 🥫</h3>
+                    <p class="text-stone-600 text-sm max-w-xl">
+                        Elige entre La Cozzu, Ketchup, Mayonesa y Salsa BBQ. Si quieres alguno en especial, indícalo en las notas del pedido.
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 text-xs font-bold text-stone-700">
+                    <span class="bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-200">La Cozzu</span>
+                    <span class="bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-200">Ketchup</span>
+                    <span class="bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-200">Mayonesa</span>
+                    <span class="bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-200">Salsa BBQ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT CEO & BRAND SECTION -->
+    <section id="acerca" class="py-16 bg-white">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-orange to-brand-red p-1 shadow-2xl">
+                            <div class="w-full h-full bg-white rounded-[22px] overflow-hidden p-6 flex flex-col justify-between text-center relative">
+                                <div class="checker-bg absolute inset-0 opacity-10"></div>
+                                
+                                <div class="relative z-10 my-auto space-y-4">
+                                    <div class="w-28 h-28 rounded-full bg-white mx-auto flex items-center justify-center border-4 border-brand-orange overflow-hidden shadow-md">
+                                        <img src="assets/logo.png" alt="Logo de Cozzu Fast Food" class="w-full h-full object-contain p-1">
+                                    </div>
+                                    <h3 class="font-heading text-2xl font-bold text-brand-dark">Cozzu Fast Food</h3>
+                                    <p class="text-xs text-stone-500 italic">"Hecho con amor y el mejor sabor crujiente de Constanza"</p>
+                                    <div class="pt-2">
+                                        <span class="inline-block bg-brand-red text-white text-xs font-bold px-4 py-1.5 rounded-full shadow">
+                                            CEO: Anayelis Méndez
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="relative z-10 pt-4 border-t border-stone-100 flex items-center justify-center gap-4 text-sm font-semibold text-stone-700">
+                                    <span>📍 Constanza</span>
+                                    <span>•</span>
+                                    <span>🛵 Solo Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Emprendimiento Local</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark">
+                        Banderillas Coreanas hechas al instante en Constanza 🇩🇴
+                    </h2>
+                    <p class="text-stone-600 leading-relaxed text-sm sm:text-base">
+                        En <strong>Cozzu Fast Food</strong> nos apasiona brindarte una experiencia culinaria única. Nuestras banderillas coreanas son preparadas al momento de tu pedido, garantizando una cubierta extra crujiente y un queso mozzarella suave y estirable que te dejará con ganas de más.
+                    </p>
+                    <p class="text-stone-600 leading-relaxed text-sm sm:text-base">
+                        Liderado por <strong>Anayelis Méndez</strong>, llevamos el auténtico sabor del street food coreano directamente hasta la puerta de tu casa o negocio en Constanza.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                            <span class="block font-heading text-2xl font-bold text-brand-red">100%</span>
+                            <span class="text-xs text-stone-500 font-medium">Queso Mozzarella de Calidad</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                            <span class="block font-heading text-2xl font-bold text-brand-orange">Fresco</span>
+                            <span class="text-xs text-stone-500 font-medium">Preparado al instante</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100 col-span-2 sm:col-span-1">
+                            <span class="block font-heading text-2xl font-bold text-brand-yellow">Rápido</span>
+                            <span class="text-xs text-stone-500 font-medium">Envío exprés en Constanza</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO & FAQ / HORARIOS SECTION -->
+    <section id="contacto" class="py-16 bg-stone-900 text-white relative">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Horario -->
+                <div class="bg-stone-800/80 p-6 rounded-3xl border border-stone-700/60 space-y-4">
+                    <div class="w-12 h-12 bg-brand-orange/20 text-brand-orange rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white">Horario de Atención</h3>
+                    <ul class="text-sm text-stone-300 space-y-2">
+                        <li class="flex justify-between border-b border-stone-700/50 pb-2"><span>Lunes</span><span class="text-stone-500">Cerrado</span></li>
+                        <li class="flex justify-between border-b border-stone-700/50 pb-2"><span>Martes a Sábado</span><span class="text-emerald-400 font-semibold">5 PM – 9 PM</span></li>
+                        <li class="flex justify-between border-b border-stone-700/50 pb-2"><span>Domingo</span><span class="text-emerald-400 font-semibold">4 PM – 9 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Delivery Constanza -->
+                <div class="bg-stone-800/80 p-6 rounded-3xl border border-stone-700/60 space-y-4">
+                    <div class="w-12 h-12 bg-brand-red/20 text-brand-red rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white">Zonas de Envío</h3>
+                    <p class="text-sm text-stone-300">
+                        Cubrimos todo el casco urbano de <strong>Constanza, República Dominicana</strong>.
+                    </p>
+                    <div class="bg-stone-900/80 p-3 rounded-xl border border-stone-700 text-xs text-stone-400">
+                        💡 Tip: Escribe tu sector o punto de referencia al momento de realizar tu pedido.
+                    </div>
+                </div>
+
+                <!-- Card 3: Contacto Directo -->
+                <div class="bg-stone-800/80 p-6 rounded-3xl border border-stone-700/60 space-y-4">
+                    <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white">Contacto Directo</h3>
+                    <p class="text-sm text-stone-300">
+                        ¿Tienes dudas sobre eventos o pedidos especiales?
+                    </p>
+                    <a href="https://wa.me/18299371403" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm py-3 rounded-xl transition-all">
+                        Escribir por WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-950 text-stone-400 py-10 border-t border-stone-800">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto px-4 text-center space-y-6">
+            
+            <div class="flex items-center justify-center gap-2">
+                <img src="assets/logo.png" alt="Logo de Cozzu Fast Food" class="h-12 w-auto rounded-lg bg-white p-1">
+                <span class="font-heading text-xl font-bold text-white">Cozzu Fast Food</span>
+            </div>
+
+            <p class="text-xs text-stone-500 max-w-md mx-auto">
+                Las mejores Banderillas Coreanas de Constanza. Sabor único y crujiente en cada mordisco.
+            </p>
+
+            <!-- Social Links -->
+            <div class="flex justify-center gap-4 text-lg">
+                <a href="https://www.instagram.com/cozzufastfood/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-stone-900 hover:bg-brand-red text-white rounded-full flex items-center justify-center transition-colors shadow">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/18299371403" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-stone-900 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center transition-colors shadow">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <div class="pt-4 border-t border-stone-900 text-xs text-stone-600">
+                &copy; <span id="year"></span> Cozzu Fast Food. CEO Anayelis Méndez. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON (MOBILE) -->
+    <div class="fixed z-40 md:hidden" style="bottom:max(1rem,env(safe-area-inset-bottom));right:max(1rem,env(safe-area-inset-right))">
+        <button type="button" data-open-cart aria-label="Abrir tu pedido" class="bg-brand-red text-white p-4 rounded-full shadow-2xl flex items-center gap-3 border-2 border-white">
+            <i class="fa-solid fa-basket-shopping text-xl"></i>
+            <span id="floatingCartCount" class="bg-brand-yellow text-brand-dark text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+        </button>
+    </div>
+
+    <!-- TOAST (confirmación al agregar producto) -->
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <!-- CART / CHECKOUT DRAWER -->
+    <div id="cartModal" class="cart-modal" hidden role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+        <div class="cart-backdrop" data-close-cart></div>
+
+        <form id="orderForm" class="cart-panel" novalidate>
+            <!-- Header -->
+            <div class="cart-head px-4 pb-4 bg-brand-red text-white flex items-center justify-between shadow-md">
+                <div class="flex items-center gap-2">
+                    <img src="assets/logo.png" alt="" class="h-9 w-9 rounded-full bg-white object-contain p-0.5" aria-hidden="true">
+                    <h3 id="cartTitle" class="font-heading text-lg font-bold">Tu Pedido Cozzu</h3>
+                </div>
+                <button type="button" data-close-cart aria-label="Cerrar pedido" class="text-white/90 hover:text-white text-xl w-11 h-11 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Un solo scroll: productos + datos de entrega -->
+            <div class="cart-scroll space-y-5">
+                <div id="cartItemsContainer" class="space-y-3"></div>
+                <p id="cartError" class="field-error" hidden role="alert">Agrega al menos una banderilla a tu pedido.</p>
+
+                <div class="space-y-3">
+                    <h4 class="font-heading text-sm font-bold text-stone-800 uppercase tracking-wider">Datos para el Delivery</h4>
+
+                    <div>
+                        <label for="custName" class="block text-xs font-semibold text-stone-600 mb-1">Tu Nombre *</label>
+                        <input type="text" id="custName" name="name" autocomplete="name" required placeholder="Ej: María López"
+                               class="w-full text-base p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                        <p id="err-custName" class="field-error" hidden>Escribe tu nombre (mínimo 2 letras).</p>
+                    </div>
+
+                    <div>
+                        <label for="custAddress" class="block text-xs font-semibold text-stone-600 mb-1">Sector / Dirección en Constanza *</label>
+                        <input type="text" id="custAddress" name="address" autocomplete="street-address" required placeholder="Ej: Calle Duarte #12, cerca de la plaza"
+                               class="w-full text-base p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                        <p id="err-custAddress" class="field-error" hidden>Indica tu sector o dirección en Constanza.</p>
+                    </div>
+
+                    <div>
+                        <label for="custPayment" class="block text-xs font-semibold text-stone-600 mb-1">Método de Pago</label>
+                        <select id="custPayment" name="payment" aria-controls="bankPanel" aria-expanded="false" class="w-full text-base p-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-red">
+                            <option value="Efectivo al recibir" selected>Efectivo al recibir</option>
+                            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                        </select>
+
+                        <!-- Panel dinámico: datos bancarios (se abre con "Transferencia Bancaria") -->
+                        <div id="bankPanel" class="bank-panel" aria-hidden="true">
+                            <div class="bank-inner">
+                                <div class="bank-card" role="region" aria-label="Datos para transferencia bancaria">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="w-8 h-8 rounded-full bg-brand-orange/15 text-brand-orange flex items-center justify-center flex-none"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                                        <h5 class="font-heading text-sm font-bold text-stone-800">Datos para tu transferencia</h5>
+                                    </div>
+                                    <dl>
+                                        <div class="bank-row"><dt>Banco</dt><dd id="bankName"></dd></div>
+                                        <div class="bank-row"><dt>Tipo de cuenta</dt><dd id="bankType"></dd></div>
+                                        <div class="bank-row"><dt>No. de cuenta</dt>
+                                            <dd class="flex items-center gap-2 justify-end">
+                                                <span id="bankNumber"></span>
+                                                <button type="button" data-copy-account aria-label="Copiar número de cuenta" class="flex-none w-9 h-9 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-600 flex items-center justify-center"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+                                            </dd>
+                                        </div>
+                                        <div class="bank-row"><dt>Titular</dt><dd id="bankHolder"></dd></div>
+                                    </dl>
+                                    <p class="mt-2 text-[11px] leading-snug text-amber-800 bg-amber-50 border border-amber-200 rounded-lg p-2">
+                                        <i class="fa-solid fa-paperclip mr-1" aria-hidden="true"></i>Al enviar tu pedido por WhatsApp, <strong>adjunta el comprobante de pago</strong> en el chat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="custNotes" class="block text-xs font-semibold text-stone-600 mb-1">Notas especiales o Salsas adicionales</label>
+                        <textarea id="custNotes" rows="2" maxlength="300" placeholder="Ej: Salsas aparte, poco picante..."
+                                  class="w-full text-base p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-red"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer fijo: total + enviar -->
+            <div class="cart-footer space-y-3">
+                <div class="flex justify-between items-center font-bold">
+                    <span class="text-stone-700">Total Estimado:</span>
+                    <span id="cartTotal" class="font-heading text-2xl text-brand-red">RD$ 0</span>
+                </div>
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+                    <span>Enviar Pedido a WhatsApp</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
